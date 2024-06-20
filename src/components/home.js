@@ -1,60 +1,56 @@
 import Carousel from "react-bootstrap/Carousel";
-import Button from "react-bootstrap/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import slide1 from "../assets/images/img-hero1.jpg";
-import slide2 from "../assets/images/img-hero2.jpg";
-import slide3 from "../assets/images/img-hero3.jpg";
+
+var heroData = [
+  {
+    id: 1,
+    image: require("../assets/images/img-hero1.jpg"),
+    title: "The perfect design for your website",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab suscipit dicta nulla. Consequuntur obcaecati officiis, labore doloribus non tempore impedit consequatur ab dolor. Explicabo quam repellendus vero omnis, nisi odio!",
+    link: "https://www.google.com",
+  },
+  {
+    id: 2,
+    image: require("../assets/images/img-hero2.jpg"),
+    title: "Start Your Future Financial Plan",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab suscipit dicta nulla. Consequuntur obcaecati officiis, labore doloribus non tempore impedit consequatur ab dolor. Explicabo quam repellendus vero omnis, nisi odio!",
+    link: "https://www.facebook.com",
+  },
+  {
+    id: 3,
+    image: require("../assets/images/img-hero3.jpg"),
+    title: "Enjoy the Difference",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab suscipit dicta nulla. Consequuntur obcaecati officiis, labore doloribus non tempore impedit consequatur ab dolor. Explicabo quam repellendus vero omnis, nisi odio!",
+    link: "https://www.twitter.com",
+  },
+];
 
 function Home() {
   return (
-    <Carousel>
-      <Carousel.Item>
-        <img className="d-block w-100" src={slide1} alt="slide 1" />
-        <Carousel.Caption>
-          <h2>The perfect design for your website</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-            suscipit dicta nulla. Consequuntur obcaecati officiis, labore
-            doloribus non tempore impedit consequatur ab dolor. Explicabo quam
-            repellendus vero omnis, nisi odio!
-          </p>
-          <Button variant="primary">
-            Learn More <FontAwesomeIcon icon={faChevronRight} />
-          </Button>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="d-block w-100" src={slide2} alt="Second slide" />
-        <Carousel.Caption>
-          <h2>Start Your Future Financial Plan</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-            suscipit dicta nulla. Consequuntur obcaecati officiis, labore
-            doloribus non tempore impedit consequatur ab dolor. Explicabo quam
-            repellendus vero omnis, nisi odio!
-          </p>
-          <Button variant="primary">
-            Learn More <FontAwesomeIcon icon={faChevronRight} />
-          </Button>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="d-block w-100" src={slide3} alt="Third slide" />
-        <Carousel.Caption>
-          <h2>Enjoy the Difference</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-            suscipit dicta nulla. Consequuntur obcaecati officiis, labore
-            doloribus non tempore impedit consequatur ab dolor. Explicabo quam
-            repellendus vero omnis, nisi odio!
-          </p>
-          <Button variant="primary">
-            Learn More <FontAwesomeIcon icon={faChevronRight} />
-          </Button>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+    <section id="home" className="hero-block">
+      <Carousel>
+        {heroData.map((hero) => {
+          return (
+            <Carousel.Item key={hero.id}>
+              <img
+                className="d-block w-100"
+                src={hero.image}
+                alt={"slide " + hero.id}
+              />
+              <Carousel.Caption>
+                <h2>{hero.title}</h2>
+                <p>{hero.description}</p>
+                <a className="btn btn-primary" href={hero.link}>
+                  Learn More <i className="fas fa-chevron-right"></i>
+                </a>
+              </Carousel.Caption>
+            </Carousel.Item>
+          );
+        })}
+      </Carousel>
+    </section>
   );
 }
 

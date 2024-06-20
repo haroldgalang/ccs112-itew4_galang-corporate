@@ -1,297 +1,146 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import team1 from "../assets/images/team1.jpg";
-import team2 from "../assets/images/team2.jpg";
-import team3 from "../assets/images/team3.jpg";
-import team4 from "../assets/images/team4.jpg";
-import team5 from "../assets/images/team5.jpg";
-import team6 from "../assets/images/team6.jpg";
-import team7 from "../assets/images/team7.jpg";
-import team8 from "../assets/images/team8.jpg";
+import Image from "react-bootstrap/Image";
+
+const teamsData = [
+  {
+    id: 1,
+    image: require("../assets/images/team1.jpg"),
+    fbLink: "https://www.facebook.com",
+    twitterLink: "https://www.twitter.com",
+    linkedinLink: "https://www.linkedin.com",
+    name: "Gabriel Hart",
+    designation: "CEO",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.",
+  },
+  {
+    id: 2,
+    image: require("../assets/images/team2.jpg"),
+    fbLink: "https://www.facebook.com",
+    twitterLink: "https://www.twitter.com",
+    linkedinLink: "https://www.linkedin.com",
+    name: "David Antony",
+    designation: "Manager",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.",
+  },
+  {
+    id: 3,
+    image: require("../assets/images/team3.jpg"),
+    fbLink: "https://www.facebook.com",
+    twitterLink: "https://www.twitter.com",
+    linkedinLink: "https://www.linkedin.com",
+    name: "Nicholas Perry",
+    designation: "UX Designer",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.",
+  },
+  {
+    id: 4,
+    image: require("../assets/images/team4.jpg"),
+    fbLink: "https://www.facebook.com",
+    twitterLink: "https://www.twitter.com",
+    linkedinLink: "https://www.linkedin.com",
+    name: "Sarah Wills",
+    designation: "Developer",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.",
+  },
+  {
+    id: 5,
+    image: require("../assets/images/team5.jpg"),
+    fbLink: "https://www.facebook.com",
+    twitterLink: "https://www.twitter.com",
+    linkedinLink: "https://www.linkedin.com",
+    name: "Sophia Pitt",
+    designation: "Developer",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.",
+  },
+  {
+    id: 6,
+    image: require("../assets/images/team6.jpg"),
+    fbLink: "https://www.facebook.com",
+    twitterLink: "https://www.twitter.com",
+    linkedinLink: "https://www.linkedin.com",
+    name: "Taylor Lopez",
+    designation: "Developer",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.",
+  },
+  {
+    id: 7,
+    image: require("../assets/images/team7.jpg"),
+    fbLink: "https://www.facebook.com",
+    twitterLink: "https://www.twitter.com",
+    linkedinLink: "https://www.linkedin.com",
+    name: "Ryan Giggs",
+    designation: "Content Writer",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.",
+  },
+  {
+    id: 8,
+    image: require("../assets/images/team8.jpg"),
+    fbLink: "https://www.facebook.com",
+    twitterLink: "https://www.twitter.com",
+    linkedinLink: "https://www.linkedin.com",
+    name: "David Smith",
+    designation: "SEO Expert",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.",
+  },
+];
 
 function Teams() {
   return (
-    <Container fluid>
-      <div className="title-holder">
-        <h2>Our Teams</h2>
-        <div className="subtitle">some of our experts</div>
-      </div>
-      <Row>
-        <Col className="col-sm-3">
-          <div className="image">
-            <img src={team1} alt="team1"></img>
-            <div className="overlay">
-              <div class="socials">
-                <ul>
-                  <li>
-                    <a href="https://www.facebook.com">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.twitter.com">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com">
-                      <i class="fab fa-linkedin-in"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="content">
-            <h3>Gabriel Hart</h3>
-            <span class="designation">CEO</span>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-              facilis, totam maiores.
-            </p>
-          </div>
-        </Col>
-        <Col className="col-sm-3">
-          <div className="image">
-            <img src={team2} alt="team2"></img>
-            <div className="overlay">
-              <div class="socials">
-                <ul>
-                  <li>
-                    <a href="https://www.facebook.com">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.twitter.com">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com">
-                      <i class="fab fa-linkedin-in"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="content">
-            <h3>David Antony</h3>
-            <span class="designation">Manager</span>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-              facilis, totam maiores.
-            </p>
-          </div>
-        </Col>
-        <Col className="col-sm-3">
-          <div className="image">
-            <img src={team3} alt="team3"></img>
-            <div className="overlay">
-              <div class="socials">
-                <ul>
-                  <li>
-                    <a href="https://www.facebook.com">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.twitter.com">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com">
-                      <i class="fab fa-linkedin-in"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="content">
-            <h3>Nicholas Perry</h3>
-            <span class="designation">UX Designer</span>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-              facilis, totam maiores.
-            </p>
-          </div>
-        </Col>
-        <Col className="col-sm-3">
-          <div className="image">
-            <img src={team4} alt="team4"></img>
-            <div className="overlay">
-              <div class="socials">
-                <ul>
-                  <li>
-                    <a href="https://www.facebook.com">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.twitter.com">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com">
-                      <i class="fab fa-linkedin-in"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="content">
-            <h3>Sarah Wills</h3>
-            <span class="designation">Developer</span>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-              facilis, totam maiores.
-            </p>
-          </div>
-        </Col>
-        <Col className="col-sm-3">
-          <div className="image">
-            <img src={team5} alt="team5"></img>
-            <div className="overlay">
-              <div class="socials">
-                <ul>
-                  <li>
-                    <a href="https://www.facebook.com">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.twitter.com">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com">
-                      <i class="fab fa-linkedin-in"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="content">
-            <h3>Sophia Pitt</h3>
-            <span class="designation">Developer</span>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-              facilis, totam maiores.
-            </p>
-          </div>
-        </Col>
-        <Col className="col-sm-3">
-          <div className="image">
-            <img src={team6} alt="team6"></img>
-            <div className="overlay">
-              <div class="socials">
-                <ul>
-                  <li>
-                    <a href="https://www.facebook.com">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.twitter.com">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com">
-                      <i class="fab fa-linkedin-in"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="content">
-            <h3>Taylor Lopez</h3>
-            <span class="designation">Developer</span>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-              facilis, totam maiores.
-            </p>
-          </div>
-        </Col>
-        <Col className="col-sm-3">
-          <div className="image">
-            <img src={team7} alt="team7"></img>
-            <div className="overlay">
-              <div class="socials">
-                <ul>
-                  <li>
-                    <a href="https://www.facebook.com">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.twitter.com">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com">
-                      <i class="fab fa-linkedin-in"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="content">
-            <h3>Ryan Giggs</h3>
-            <span class="designation">Content Writer</span>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-              facilis, totam maiores.
-            </p>
-          </div>
-        </Col>
-        <Col className="col-sm-3">
-          <div className="image">
-            <img src={team8} alt="team8"></img>
-            <div className="overlay">
-              <div class="socials">
-                <ul>
-                  <li>
-                    <a href="https://www.facebook.com">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.twitter.com">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com">
-                      <i class="fab fa-linkedin-in"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="content">
-            <h3>David Smith</h3>
-            <span class="designation">SEO Expert</span>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-              facilis, totam maiores.
-            </p>
-          </div>
-        </Col>
-      </Row>
-    </Container>
+    <section id="teams" className="block teams-block">
+      <Container fluid>
+        <div className="title-holder">
+          <h2>Our teams</h2>
+          <div className="subtitle">some of our experts</div>
+        </div>
+        <Row>
+          {teamsData.map((teams) => {
+            return (
+              <Col sm={3} key={teams.id}>
+                <div className="image">
+                  <Image src={teams.image} />
+                  <div className="overlay">
+                    <div className="socials">
+                      <ul>
+                        <li>
+                          <a href={teams.fbLink}>
+                            <i className="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href={teams.twitterLink}>
+                            <i className="fab fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href={teams.linkedinLink}>
+                            <i className="fab fa-linkedin-in"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="content">
+                  <h3>{teams.name}</h3>
+                  <span className="designation">{teams.designation}</span>
+                  <p>{teams.description}</p>
+                </div>
+              </Col>
+            );
+          })}
+        </Row>
+      </Container>
+    </section>
   );
 }
 
